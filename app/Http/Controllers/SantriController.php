@@ -14,8 +14,13 @@ class SantriController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->all());
-
+        //this is for validation
+        $request->validate([
+            'nama' => 'required',
+            'umur' => 'required',
+            'alamat' => 'required',
+            'jenis_kelamin' => 'required', 
+        ]);
 
         $nama = $request->nama;
         $umur = $request->umur;
