@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class SantriController extends Controller
 {
+    public function index()
+    {
+        $santris = Santri::all();
+
+        return view('santri.index', compact('santris')); //compact data yang mau dikirim ke index.blade
+    }
+
     public function create()
     {
         return view('santri.create');
@@ -36,6 +43,6 @@ class SantriController extends Controller
 
         // return view('santri.create');
         // return redirect()->url('santri/create');
-        return redirect()->route('santri.create');
+        return redirect()->route('santri.index');
     }
 }

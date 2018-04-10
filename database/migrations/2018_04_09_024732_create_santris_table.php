@@ -16,7 +16,7 @@ class CreateSantrisTable extends Migration
         Schema::create('santris', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->integer('umur')->unique();
+            $table->integer('umur')->unsigned();
             $table->text('alamat');
             $table->string('jenis_kelamin');
             $table->timestamps();
