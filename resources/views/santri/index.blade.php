@@ -8,6 +8,7 @@
             <th>Umur</th>
             <th>Alamat</th>
             <th>Jenis Kelamin</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
                 <td>{{ $santri->umur }}</td>
                 <td>{{ $santri->alamat }}</td>
                 <td>{{ $santri->jenis_kelamin }}</td>
+                <td><a href="{{ route('santri.show', $santri->id) }}">Details</a> <a href="{{ route('santri.edit', $santri->id) }}">Edit</a></td>
             </tr>            
         @endforeach
     </tbody>
