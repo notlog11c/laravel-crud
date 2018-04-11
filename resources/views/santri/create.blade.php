@@ -1,4 +1,4 @@
-<h1>Input Data Santri</h1>
+<h1><center>Data Santri</center></h1>
 
 
 <form action="{{ route('santri.store') }}" method="post">
