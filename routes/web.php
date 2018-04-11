@@ -16,3 +16,4 @@ Route::post('santris', 'SantriController@store')->name('santri.store');
 Route::get('santris/{id}', 'SantriController@show')->name('santri.show');
 Route::get('santris/{id}/edit', 'SantriController@edit')->name('santri.edit');
 Route::patch('santris/{id}', 'SantriController@update')->name('santri.update');
+Route::delete('santris/{id}', 'SantriController@destroy')->name('santri.destroy');

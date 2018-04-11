@@ -83,4 +83,12 @@ class SantriController extends Controller
 
         return redirect()->route('santri.index');
     }
+
+    public function destroy($id)
+    {
+        $santri = Santri::findOrFail($id);
+        $santri->delete();
+
+        return redirect()->route('santri.index');
+    }
 }
